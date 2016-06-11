@@ -27,3 +27,10 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+config :guardian, Guardian,
+  issuer: "GuardianOfGalaxy",
+  ttl: {30, :days},
+  secret_key: "iasodajsdadkjabskjasda",
+  serializer: GuardianOfGalaxy.GuardianSerializer
+
